@@ -1,74 +1,111 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Dashboard Penjemputan Sampah</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>Platform Penjemputan Sampah Anorganik Terpilah</h1>
-    </header>
+    <div class="dashboard-grid">
 
-    <nav>
-        <a href="index.html">Beranda</a> |
-        <a href="pengajuan.html">Pengajuan Penjemputan</a> |
+        <header>
+            <h1>PLATFORM PENJEMPUTAN SAMPAH ANORGANIK TERPILAH</h1>
+        </header>
+
+        <nav>
+        <a href="index.html">Beranda</a>
+        <a href="pengajuan.html">Pengajuan Penjemputan</a>
         <a href="dashboard.html">Dashboard</a>
-    </nav>
+        </nav>
 
-    <main>
+        <main>
 
-        <section>
             <h2>Rekapitulasi Permintaan Penjemputan</h2>
 
-            <table border="1">
+            <!-- REKAP STATISTIK -->
+            <div class="stats-grid">
 
-                <thead>
-                    <tr>
-                        <th>No</th>
-                        <th>Nama Pengguna</th>
-                        <th>Jenis Sampah</th>
-                        <th>Lokasi</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
+                <div class="stat-card">
+                    <h4>TOTAL PENGAJUAN</h4>
+                    <p>20 Pengajuan</p>
+                </div>
 
-                <tbody>
+                <div class="stat-card">
+                    <h4>MENUNGGU</h4>
+                    <p>5 Pengajuan</p>
+                </div>
 
-                    <tr>
-                        <td>1</td>
-                        <td>Andi</td>
-                        <td>Plastik</td>
-                        <td>Cilacap</td>
-                        <td>Menunggu</td>
-                    </tr>
+                <div class="stat-card">
+                    <h4>DIJADWALKAN</h4>
+                    <p>10 Pengajuan</p>
+                </div>
 
-                    <tr>
-                        <td>2</td>
-                        <td>Siti</td>
-                        <td>Kardus</td>
-                        <td>Kesugihan</td>
-                        <td>Dijadwalkan</td>
-                    </tr>
+                <div class="stat-card">
+                    <h4>SELESAI</h4>
+                    <p>15 Pengajuan</p>
+                </div>
 
-                    <tr>
-                        <td>3</td>
-                        <td>Budi</td>
-                        <td>Kertas</td>
-                        <td>Maos</td>
-                        <td>Selesai</td>
-                    </tr>
+            </div>
 
-                </tbody>
 
-            </table>
-        </section>
+            <!-- TABEL -->
+            <div class="table-container">
 
-    </main>
+                <table>
 
-    <footer>
-        <p>&copy; 2026 Platform Penjemputan Sampah Anorganik Terpilah</p>
-    </footer>
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Pengguna</th>
+                            <th>Jenis Sampah</th>
+                            <th>Lokasi</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1</td>
+                            <td>Andi</td>
+                            <td>Plastik</td>
+                            <td>Cilacap</td>
+                            <td>Menunggu</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Siti</td>
+                            <td>Kardus</td>
+                            <td>Kesugihan</td>
+                            <td>Dijadwalkan</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>Budi</td>
+                            <td>Kertas</td>
+                            <td>Maos</td>
+                            <td>Selesai</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>
+                &copy; 2026 Platform Penjemputan Sampah Anorganik Terpilah
+            </p>
+        </footer>
+
+    </div>
 
 </body>
 </html>

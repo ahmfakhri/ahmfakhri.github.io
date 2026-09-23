@@ -1,268 +1,328 @@
 /* =========================================================
-   CSS GLOBAL
-   Digunakan oleh semua halaman
+   Platform Penjemputan Sampah Anorganik Terpilah
    ========================================================= */
 
-/* Reset dasar */
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
-  color: #333;
-  min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    color: #333;
+    min-height: 100vh;
 }
 
-/* Header */
 header {
-  background: #4caf50;
-  color: white;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    background: #4caf50;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Navigasi */
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background: #66bb6a;
-  padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #66bb6a;
+    padding: 12px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition:
-    background 0.3s,
-    transform 0.2s;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 nav a:hover {
-  background: #388e3c;
-  transform: scale(1.05);
+    background: #388e3c;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #4caf50;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 
 /* =========================================================
-   BERANDA
+   P5.1 - BERANDA
    ========================================================= */
 
-/* Container utama */
-main {
-  width: 90%;
-  max-width: 800px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.home-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
-main h2 {
-  color: #2e7d32;
-  margin-bottom: 15px;
-  text-align: center;
+.home-container h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-/* Section sambutan */
-section.welcome {
-  margin-bottom: 30px;
+.home-container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
-section.welcome p {
-  font-size: 1.05em;
-  line-height: 1.6;
-  text-align: justify;
-}
-
-/* Section cara kerja */
-section.cara-kerja h3 {
-  color: #388e3c;
-  margin-bottom: 10px;
-}
-
-section.cara-kerja ol {
-  padding-left: 20px;
-}
-
-section.cara-kerja li {
-  margin-bottom: 8px;
-  font-size: 1em;
-  line-height: 1.5;
-  position: relative;
-}
-
-section.cara-kerja li::marker {
-  color: #4caf50;
-  font-weight: bold;
+.home-container ol {
+    padding-left: 25px;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   PENGAJUAN
+   P5.2 - DASHBOARD
+   CSS GRID UNTUK LAYOUT KONTEN
    ========================================================= */
 
-/* Container form */
-main {
-  width: 90%;
-  max-width: 600px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 95%;
+    max-width: 1500px;
+    margin: 30px auto;
 }
 
-main h2 {
-  color: #2e7d32;
-  margin-bottom: 10px;
-  text-align: center;
+.dashboard-grid header,
+.dashboard-grid nav,
+.dashboard-grid main,
+.dashboard-grid footer {
+    grid-column: 1;
 }
 
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5px;
+.dashboard-grid main {
+    width: 100%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
 }
 
-label {
-  font-weight: 600;
-  color: #2e7d32;
+.dashboard-grid main h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
 }
 
-input[type="text"],
-input[type="file"],
-textarea,
-select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 0.95em;
-  transition:
-    border 0.3s,
-    box-shadow 0.3s;
+.table-container {
+    width: 100%;
+    overflow-x: auto;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #4caf50;
-  box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
-  outline: none;
-}
-
-/* Tombol */
-button {
-  background: #4caf50;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition:
-    background 0.3s,
-    transform 0.2s;
-}
-
-button:hover {
-  background: #388e3c;
-  transform: scale(1.05);
-}
-
-
-/* =========================================================
-   DASHBOARD
-   ========================================================= */
-
-/* Container utama dashboard */
-.container {
-  width: 90%;
-  margin: 40px auto;
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.container h2 {
-  color: #2e7d32;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Tabel */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
-  font-size: 0.95em;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
 }
 
 table th,
 table td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: center;
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
 }
 
 table th {
-  background: #4caf50;
-  color: white;
+    background: #4caf50;
+    color: white;
 }
 
 table tr:nth-child(even) {
-  background: #f9fbe7;
+    background: #f9fbe7;
 }
 
 table tr:hover {
-  background: #c8e6c9;
-  transition: background 0.3s;
-}
-
-/* Status badge */
-.status {
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-weight: bold;
-  color: white;
-}
-
-.status.menunggu {
-  background: #ffa726;
-}
-
-.status.dijadwalkan {
-  background: #29b6f6;
-}
-
-.status.selesai {
-  background: #66bb6a;
+    background: #c8e6c9;
 }
 
 
 /* =========================================================
-   FOOTER
-   Digunakan oleh semua halaman
+   P5.3 - STAT CARDS DASHBOARD
+   CSS GRID 4 KOLOM
    ========================================================= */
 
-footer {
-  background: #4caf50;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: #eff6ff;
+    border-left: 4px solid #3b82f6;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card h4 {
+    margin: 0;
+    color: #1e3a8a;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-card p {
+    margin: 5px 0 0 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1f2937;
+}
+
+
+/* =========================================================
+   P5.4 - PENGAJUAN
+   FLEXBOX UNTUK FORM
+   ========================================================= */
+
+.form-container {
+    background-color: #ffffff;
+    border: 2px solid #3b82f6;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.form-container h2,
+.form-container > p {
+    width: 100%;
+}
+
+.form-container h2 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.form-container > p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+.input-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.input-control:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.25);
+}
+
+#btn-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #16a34a;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#btn-submit:hover {
+    background-color: #15803d;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    .dashboard-grid header,
+    .dashboard-grid nav,
+    .dashboard-grid main,
+    .dashboard-grid footer {
+        grid-column: 1;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        width: 92%;
+        padding: 20px;
+    }
+
+    .home-container {
+        width: 92%;
+        padding: 20px;
+    }
 }

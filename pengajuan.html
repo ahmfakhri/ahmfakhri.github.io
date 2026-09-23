@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Pengajuan Penjemputan Sampah</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -11,12 +13,12 @@
     </header>
 
     <nav>
-        <a href="index.html">Beranda</a> |
-        <a href="pengajuan.html">Pengajuan Penjemputan</a> |
+        <a href="index.html">Beranda</a>
+        <a href="pengajuan.html">Pengajuan Penjemputan</a>
         <a href="dashboard.html">Dashboard</a>
     </nav>
 
-    <main>
+    <main class="form-container">
 
         <h2>Form Pengajuan Penjemputan Sampah</h2>
 
@@ -27,68 +29,90 @@
 
         <form action="#" method="post" enctype="multipart/form-data">
 
-            <label for="nama">Nama Pengguna:</label><br>
-            <input
-                type="text"
-                id="nama"
-                name="nama"
-                placeholder="Masukkan nama Anda"
-                required
-            >
-            <br><br>
+            <div class="form-group">
+                <label for="nama">Nama Pengguna:</label>
 
-            <label for="jenis_sampah">Jenis Sampah:</label><br>
-            <select id="jenis_sampah" name="jenis_sampah" required>
-                <option value="">-- Pilih Jenis Sampah --</option>
-                <option value="plastik">Plastik</option>
-                <option value="kertas">Kertas</option>
-                <option value="kardus">Kardus</option>
-                <option value="logam">Logam</option>
-            </select>
-            <br><br>
+                <input
+                    class="input-control"
+                    type="text"
+                    id="nama"
+                    name="nama"
+                    placeholder="Masukkan nama Anda"
+                    required
+                >
+            </div>
 
-            <label for="jumlah">Perkiraan Jumlah:</label><br>
-            <input
-                type="number"
-                id="jumlah"
-                name="jumlah"
-                placeholder="Contoh: 5 kg"
-                required
-            >
-            <br><br>
+            <div class="form-group">
+                <label for="jenis_sampah">Jenis Sampah:</label>
 
-            <label for="lokasi">Lokasi Penjemputan:</label><br>
-            <input
-                type="text"
-                id="lokasi"
-                name="lokasi"
-                placeholder="Masukkan lokasi penjemputan"
-                required
-            >
-            <br><br>
+                <select
+                    class="input-control"
+                    id="jenis_sampah"
+                    name="jenis_sampah"
+                    required
+                >
+                    <option value="">-- Pilih Jenis Sampah --</option>
+                    <option value="plastik">Plastik</option>
+                    <option value="kertas">Kertas</option>
+                    <option value="kardus">Kardus</option>
+                    <option value="logam">Logam</option>
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="jumlah">Perkiraan Jumlah:</label>
 
-            <label for="bukti">Foto Sampah:</label><br>
-            <input
-                type="file"
-                id="bukti"
-                name="bukti"
-                accept="image/*"
-                required
-            >
-            <br><br>
+                <input
+                    class="input-control"
+                    type="number"
+                    id="jumlah"
+                    name="jumlah"
+                    placeholder="Contoh: 5 kg"
+                    required
+                >
+            </div>
 
-            <label for="catatan">Catatan:</label><br>
-            <textarea
-                id="catatan"
-                name="catatan"
-                placeholder="Tambahkan catatan jika diperlukan"
-                rows="4"
-                cols="40"
-            ></textarea>
-            <br><br>
+            <div class="form-group">
+                <label for="lokasi">Lokasi Penjemputan:</label>
 
-            <button type="submit">Ajukan Penjemputan</button>
+                <input
+                    class="input-control"
+                    type="text"
+                    id="lokasi"
+                    name="lokasi"
+                    placeholder="Masukkan lokasi penjemputan"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="bukti">Foto Sampah:</label>
+
+                <input
+                    class="input-control"
+                    type="file"
+                    id="bukti"
+                    name="bukti"
+                    accept="image/*"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="catatan">Catatan:</label>
+
+                <textarea
+                    class="input-control"
+                    id="catatan"
+                    name="catatan"
+                    placeholder="Tambahkan catatan jika diperlukan"
+                    rows="4"
+                ></textarea>
+            </div>
+
+            <button type="submit" id="btn-submit">
+                Ajukan Penjemputan
+            </button>
 
         </form>
 
