@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pengajuan Penjemputan Sampah</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Platform Penjemputan Sampah Anorganik Terpilah</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a> |
+        <a href="pengajuan.html">Pengajuan Penjemputan</a> |
+        <a href="dashboard.html">Dashboard</a>
+    </nav>
+
+    <main>
+
+        <h2>Form Pengajuan Penjemputan Sampah</h2>
+
+        <p>
+            Silakan isi data pengajuan penjemputan sampah anorganik
+            yang telah Anda pilah.
+        </p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <label for="nama">Nama Pengguna:</label><br>
+            <input
+                type="text"
+                id="nama"
+                name="nama"
+                placeholder="Masukkan nama Anda"
+                required
+            >
+            <br><br>
+
+            <label for="jenis_sampah">Jenis Sampah:</label><br>
+            <select id="jenis_sampah" name="jenis_sampah" required>
+                <option value="">-- Pilih Jenis Sampah --</option>
+                <option value="plastik">Plastik</option>
+                <option value="kertas">Kertas</option>
+                <option value="kardus">Kardus</option>
+                <option value="logam">Logam</option>
+            </select>
+            <br><br>
+
+            <label for="jumlah">Perkiraan Jumlah:</label><br>
+            <input
+                type="number"
+                id="jumlah"
+                name="jumlah"
+                placeholder="Contoh: 5 kg"
+                required
+            >
+            <br><br>
+
+            <label for="lokasi">Lokasi Penjemputan:</label><br>
+            <input
+                type="text"
+                id="lokasi"
+                name="lokasi"
+                placeholder="Masukkan lokasi penjemputan"
+                required
+            >
+            <br><br>
+
+
+            <label for="bukti">Foto Sampah:</label><br>
+            <input
+                type="file"
+                id="bukti"
+                name="bukti"
+                accept="image/*"
+                required
+            >
+            <br><br>
+
+            <label for="catatan">Catatan:</label><br>
+            <textarea
+                id="catatan"
+                name="catatan"
+                placeholder="Tambahkan catatan jika diperlukan"
+                rows="4"
+                cols="40"
+            ></textarea>
+            <br><br>
+
+            <button type="submit">Ajukan Penjemputan</button>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Platform Penjemputan Sampah Anorganik Terpilah</p>
+    </footer>
+
+</body>
+</html>
